@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'pokemon_screen.dart';
+
+void addDummyData() {
+  FirebaseFirestore.instance.collection('peliculas').add({
+    'titulo': 'Ejemplo',
+    'anio': 2025,
+  });
+}
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -36,10 +44,36 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (_) => PokemonScreen()),
                 );
               },
-              child: Text(
-                'Ver Pokémon desde API',
-                style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue, // Fondo azul
+                foregroundColor: Colors.white, // Color del texto
+                padding: EdgeInsets.symmetric(
+                  vertical: 15,
+                  horizontal: 30,
+                ), // Espaciado interno
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30), // Bordes redondeados
+                ),
               ),
+              child: Text('Ver Pokémon desde API'),
+            ),
+            SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () {
+                addDummyData(); // Llamar a la función para agregar datos a Firestore
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, // Fondo verde para el botón
+                foregroundColor: Colors.white, // Color del texto
+                padding: EdgeInsets.symmetric(
+                  vertical: 15,
+                  horizontal: 30,
+                ), // Espaciado interno
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30), // Bordes redondeados
+                ),
+              ),
+              child: Text('Agregar datos a Firestore'),
             ),
           ],
         ),
