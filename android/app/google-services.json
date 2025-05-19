@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "531045984545",
+    "project_id": "cinepedia-firebase",
+    "storage_bucket": "cinepedia-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531045984545:android:5e46961af61ef3221fb660",
+        "android_client_info": {
+          "package_name": "com.example.ldsw_utilizacion_de_widgets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJZsfuvVnuFb_QS_yFlp0nek-l_jaa7oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
